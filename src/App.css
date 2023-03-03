@@ -1,0 +1,326 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task {
+  border: 1px solid #ddd;
+  padding: 10
+}
+
+
+.task .description {
+margin-bottom: 10px;
+}
+
+.task .date {
+font-style: italic;
+font-size: 0.8rem;
+}
+
+.task .completed {
+text-decoration: line-through;
+}
+
+.task-form label {
+display: block;
+margin-bottom: 10px;
+}
+
+.task-form input[type='text'],
+.task-form textarea,
+.task-form input[type='date'] {
+display: block;
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.task-form button[type='submit'] {
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+}
+
+.task-form button[type='submit']:hover {
+background-color: #3e8e41;
+}
+
+.task-form button[type='submit']:active {
+background-color: #3e8e41;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* colors */
+:root {
+  --primary-color: #2196f3;
+  --primary-light-color: #6ec6ff;
+  --primary-dark-color: #0069c0;
+  --secondary-color: #f44336;
+  --secondary-light-color: #ff7961;
+  --secondary-dark-color: #ba000d;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+}
+
+/* header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* task form */
+.task-form input[type='text'],
+.task-form textarea,
+.task-form input[type='date'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.task-form button[type='submit'] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.task-form button[type='submit']:hover {
+  background-color: var(--primary-dark-color);
+}
+
+.task-form button[type='submit']:active {
+  background-color: var(--primary-dark-color);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* task list */
+.task-list {
+  margin: 1rem 0;
+}
+
+.task {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.task:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.task .description {
+  margin-bottom: 10px;
+}
+
+.task .date {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.task .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* search */
+.search input[type='text'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 
+0 0 5px rgba(0,0,0,0.1);
+}
+
+/* buttons */
+button {
+background-color: var(--secondary-color);
+color: white;
+border: none;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+margin-right: 10px;
+}
+
+button:hover {
+background-color: var(--secondary-dark-color);
+}
+
+button:active {
+background-color: var(--secondary-dark-color);
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+button.delete {
+background-color: var(--secondary-color);
+}
+
+button.delete:hover {
+background-color: var(--secondary-dark-color);
+}
+
+button.delete:active {
+background-color: var(--secondary-dark-color);
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+/* modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.4);
+overflow: auto;
+}
+
+.modal-content {
+background-color: white;
+margin: 10% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 500px;
+}
+
+.modal-header h2 {
+margin-top: 0;
+}
+
+.modal-body {
+margin-bottom: 1rem;
+}
+
+.modal-footer {
+display: flex;
+justify-content: flex-end;
+}
+
+.modal-footer button {
+margin-left: 1rem;
+}
+/* animations */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* task list */
+.task-list {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.task-list .fade-enter,
+.task-list .fade-exit {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.task-list .fade-enter-active,
+.task-list .fade-exit-active {
+  opacity: 0;
+}
+
+/* modal */
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content .fade-enter,
+.modal-content .fade-exit {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+.modal-content .fade-enter-active,
+.modal-content .fade-exit-active {
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+.modal-header,
+.modal-footer {
+position: relative;
+}
+
+.modal-header .fade-enter,
+.modal-header .fade-exit,
+.modal-footer .fade-enter,
+.modal-footer .fade-exit {
+position: absolute;
+top: 0;
+left: 0;
+opacity: 1;
+}
+
+.modal-header .fade-enter-active,
+.modal-header .fade-exit-active,
+.modal-footer .fade-enter-active,
+.modal-footer .fade-exit-active {
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
